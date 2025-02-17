@@ -16,70 +16,6 @@ body {
     padding-bottom: 90px;
 }
 
-.logo {
-    height: auto;
-    width: auto;
-    float: left;
-}
-
-.title span {
-    --total: calc(var(--duration) + var(--delay));
-    position: relative;
-    display: block;
-    color: transparent;
-    overflow: hidden;
-    animation: revealText 1s var(--total) forwards;
-}
-
-.title span::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scalex(0);
-    transform-origin: left;
-    background: red;
-    animation:
-        rollIn var(--duration) var(--delay) forwards,
-        rollOut var(--duration) var(--total) forwards;
-}
-
-.title span:nth-child(2)::after {
-    border-top: 3px solid red;
-}
-
-@keyframes revealText {
-    to {
-        color: red;
-    }
-
-    from {
-        color: white;
-    }
-}
-
-@keyframes rollIn {
-    from {
-        transform: scaleX(0);
-    }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-
-@keyframes rollOut {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(105%);
-    }
-}
-
 h2 {
     color: #ff2e2e;
 }
@@ -88,7 +24,6 @@ nav {
     margin-left: 950px;
     margin-top: 20px;
     position: relative;
-    /* top: -35px; */
     width: 515px;
     height: 50px;
     background-color: #222;

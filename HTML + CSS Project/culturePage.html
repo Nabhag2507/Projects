@@ -5,17 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indian Culture</title>
+  <link rel="stylesheet" href="culturePage.css">
 </head>
 
 <body>
   <nav>
-    <ul>
-      <li><a href="HomePage.html">Home</a></li>
-      <li><a href="CulturePage.html">Cultural</a></li>
-      <li><a href="LandmarkPage.html">Landmarks</a></li>
-      <li><a href="CuisinPage.html">Cuisine</a></li>
-      <li><a href="ContactPage.html">Contact Us</a></li>
-    </ul>
+    <a href="homePage.html">Home</a>
+    <a href="culturePage.html">Cultural</a>
+    <a href="landmarkPage.html">Landmarks</a>
+    <a href="cuisinPage.html">Cuisine</a>
+    <a href="contactPage.html">Contact Us</a>
+    <span></span>
   </nav>
   <h1>Indian culture</h1>
   <p>
@@ -43,7 +43,11 @@
       <b>Christmas:</b>Fastivals of joy, celebrating the brith of jesus
       Cherist.
     </li>
-    <img src="../diwali.jpg" alt="diwali" height="300px" />
+    <div style="display: flex;">
+      <div class="zoom">
+        <img src="../diwali.jpg" alt="diwali" height="300px" />
+      </div>
+    </div>
     <p>Diwali-The Fastival of lights.</p>
   </ul>
   <h1>Languages</h1>
@@ -96,12 +100,25 @@
     <li>
       <b>Dhoti:</b>Traditional men's wear in southern and eastern India.
     </li>
-    <img src="../saree.jpg" alt="saree" height="300px" />
+    <div style="display: flex;">
+      <div class="zoom">
+        <img src="../saree.jpg" alt="saree" height="300px" style="position: relative;">
+      </div>
+    </div>
     <p>Traditional Saree-Grace and Elegant</p>
-  </ul>
-  <a href="./home.html">&larr; Back to home</a>
+    <div class="main"></div>
 
-  <p>Contact us at <a href="homePage.html">info@incredibleindia.com</a></p>
-  <p>&copy; 2025 incredible India project</p>
+    <div class="footer">
+      <span>Contact us at </span>
+      <a href="" style="text-decoration: none;">info@incredibleindia.com</a>
+      <p>&copy; 2025 Incredible India Project. All rights reserved.</p>
+      <p style="display: inline-block">Follow us on : </p>
+      <img src="../insta logo.jpg" alt="insta logo" height="30px" style="position: relative; top: 10px;">
+      <a href="https://www.instagram.com/nabhagsorathiya/" style="text-decoration: none;">Instagram | </a>
+
+      <img src="../fb logo.jpg" alt="facebook logo" height="30px" style="position: relative; top: 10px;">
+      <a href="https://www.facebook.com/nabhagsorathiya/" style="text-decoration: none;">Facebook</a>
+    </div>
 </body>
+
 </html>

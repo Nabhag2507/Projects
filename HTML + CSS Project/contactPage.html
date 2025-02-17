@@ -5,18 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact US</title>
+  <link rel="stylesheet" href="contactPage.css">
+
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="HomePage.html">Home</a></li>
-      <li><a href="CulturePage.html">Cultural</a></li>
-      <li><a href="LandmarkPage.html">Landmarks</a></li>
-      <li><a href="CuisinPage.html">Cuisine</a></li>
-      <li><a href="ContactPage.html">Contact Us</a></li>
-    </ul>
-  </nav>
+  <div class="header">
+    <nav>
+      <a href="homePage.html">Home</a>
+      <a href="culturePage.html">Cultural</a>
+      <a href="landmarkPage.html">Landmarks</a>
+      <a href="cuisinPage.html">Cuisine</a>
+      <a href="contactPage.html">Contact Us</a>
+      <span></span>
+    </nav>
+  </div>
   <h1>Contact Us</h1>
   <p>
     Please fill out the form below for any inquiries or to register as a
@@ -30,18 +33,20 @@
     <br /><br />
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required />
+    <input type="password" id="password" name="password" required placeholder="Enter your password" />
     <br /><br />
-
-    <label>Gender:</label>
-    <input type="radio" id="male" name="gender" value="male" required />
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female" required />
-    <label for="female">Female</label>
+    <div style="display: flex; gap: 10px;">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label>
+    </div>
     <br /><br />
-
+<div style="display: flex; gap: 20px;">
     <label for="newsletter">Subscribe to Newsletter:</label>
     <input type="checkbox" id="newsletter" name="newsletter" checked />
+  </div>
     <br /><br />
 
     <label for="state">State:</label>
@@ -79,13 +84,18 @@
   <h1>More Information</h1>
   <p>Explore government job opportunities on the official OJAS Website:</p>
   <iframe src="https://ojas.gujarat.gov.in/" frameborder="0"></iframe>
-  <a href="./home.html">
-    <ul>
-      <a href="homePage.html">&larr; Back to home</a>
-    </ul>
-  </a>
-  <p>Contact us at <a href="">info@incredibleindia.com</a></p>
-  <p>&copy; 2025 Incredible India project</p>
+
+  <div class="footer">
+    <span>Contact us at </span>
+    <a href="" style="text-decoration: none;">info@incredibleindia.com</a>
+    <p>&copy; 2025 Incredible India Project. All rights reserved.</p>
+    <p style="display: inline-block">Follow us on : </p>
+    <img src="../insta logo.jpg" alt="insta logo" height="30px" style="position: relative; top: 10px;">
+    <a href="https://www.instagram.com/nabhagsorathiya/" style="text-decoration: none;">Instagram | </a>
+
+    <img src="../fb logo.jpg" alt="facebook logo" height="30px" style="position: relative; top: 10px;">
+    <a href="https://www.facebook.com/nabhagsorathiya/" style="text-decoration: none;">Facebook</a>
+  </div>
 </body>
 
 </html>

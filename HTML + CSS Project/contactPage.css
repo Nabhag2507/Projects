@@ -16,79 +16,10 @@ body {
     padding-bottom: 90px;
 }
 
-.logo {
-    height: auto;
-    width: auto;
-    float: left;
-}
-
-.title span {
-    --total: calc(var(--duration) + var(--delay));
-    position: relative;
-    display: block;
-    color: transparent;
-    overflow: hidden;
-    animation: revealText 1s var(--total) forwards;
-}
-
-.title span::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scalex(0);
-    transform-origin: left;
-    background: red;
-    animation:
-        rollIn var(--duration) var(--delay) forwards,
-        rollOut var(--duration) var(--total) forwards;
-}
-
-.title span:nth-child(2)::after {
-    border-top: 3px solid red;
-}
-
-@keyframes revealText {
-    to {
-        color: red;
-    }
-
-    from {
-        color: white;
-    }
-}
-
-@keyframes rollIn {
-    from {
-        transform: scaleX(0);
-    }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-
-@keyframes rollOut {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(105%);
-    }
-}
-
-h2 {
-    color: #ff2e2e;
-}
-
 nav {
     margin-left: 950px;
     margin-top: 20px;
     position: relative;
-    /* top: -35px; */
     width: 515px;
     height: 50px;
     background-color: #222;
@@ -139,25 +70,94 @@ nav a:nth-child(5):hover~span{
     left: 405px;
     width: 100px;
 }
-ult {
-    position: relative;
-    left: 450px;
-    top: -300px;
+h1 {
+    font-size: 2.5rem;
 }
 
-.zoom {
-    overflow: hidden;
-    border-radius: 16px;
+h2 {
+    font-size: 2rem;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #0c3633;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Button Styles */
+button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.zoom img {
-    object-fit: cover;
-    transition: transform 0.8s;
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
 }
 
-.zoom:hover img {
-    transform: scale(1.1);
+button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    iframe {
+        height: 300px;
+    }
 }
 
 .footer {
