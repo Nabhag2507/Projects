@@ -8,12 +8,14 @@ class Train{
     public Train(int trainNo, String trainName, String[] stop, int[] Distance) {
         this.trainNo = trainNo;
         this.trainName = trainName;
+        this.stop = stop;
+        this.Distance = Distance;
     }
 }
-class Passenger{
-    String name;
-    int age;
-}
+// class Passenger{
+//     String name;
+//     int age;
+// }
 
 
 public class project {
@@ -28,7 +30,7 @@ public class project {
 
         String[] stopsT3={"dwarka","ratlam jn","gangapur","agra","varanasi","patna","barsoi","guwahati"};
         int[] DistanceT3={0,849,1287,1448,2099,2327,2671,3224};
-        Train t3 = new Train(15635, "GUWAHATI EXPRES",stopsT3,DistanceT3);
+        Train t3 = new Train(15635, "GUWAHATI EXPRESS",stopsT3,DistanceT3);
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter starting point :");
@@ -36,5 +38,20 @@ public class project {
 
         System.out.print("Enter Destination : ");
         String dest = sc.nextLine();
+
+        for (int i=0;i<3;i++){
+            if (stopsT1[i].equals(start) && stopsT1[i].equals(dest)){
+                System.out.println("Train No (1): "+t1.trainNo);
+            }
+            
+            if (stopsT2[i].equals(start) && stopsT2[i].equals(dest)){
+                System.out.println("Train No (2): "+t2.trainNo);
+            }
+            
+            if (stopsT3[i].equals(start) && stopsT3[i].equals(dest)){
+                System.out.println("Train No (3): "+t3.trainNo);
+            }
+        }
+        sc.close();
     }
 }
